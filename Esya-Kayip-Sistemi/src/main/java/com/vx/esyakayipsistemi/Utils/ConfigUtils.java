@@ -5,6 +5,8 @@ import java.util.InvalidPropertiesFormatException;
 import java.util.Properties;
 
 public class ConfigUtils {
+
+    //config.properties deki degiskenlere erisebilmek icin bir fonksiyon
     private static final Properties properties = new Properties();
 
     static {
@@ -22,4 +24,6 @@ public class ConfigUtils {
     public static String getProperty(String key) {
         return properties.getProperty(key, "Unknown Key not found ");
     }
+
+
 }

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 <?import javafx.scene.layout.HBox?>
-<AnchorPane prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vx.esyakayipsistemi.Controller.AdminController.AdminController" stylesheets="@../Styles/admin.css" styleClass="anchor-pane">
+<AnchorPane prefHeight="600.0" prefWidth="975.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vx.esyakayipsistemi.Controller.AdminController.AdminController" stylesheets="@../Styles/admin.css" styleClass="anchor-pane">
     <children>
         <VBox alignment="TOP_CENTER" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
             <children>

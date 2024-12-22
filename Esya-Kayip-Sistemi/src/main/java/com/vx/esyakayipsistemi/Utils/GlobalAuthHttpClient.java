@@ -70,7 +70,7 @@ public class GlobalAuthHttpClient {
         return httpclient.send(request,HttpResponse.BodyHandlers.ofString());
     }
 
-    //custom post function
+    //custom post function without authorization header
     public static HttpResponse<String> post(String url, String json) throws Exception{
 
         HttpRequest request=HttpRequest.newBuilder(URI.create(url))
@@ -150,7 +150,7 @@ public class GlobalAuthHttpClient {
 //    }
 
 
-
+//-------------------------------------------------------------------------------------------------------------------
 
 
 //    public static HttpResponse<String> postWithJsonAndImage(String url, String json, File image) throws Exception {
@@ -195,7 +195,7 @@ public class GlobalAuthHttpClient {
 //    }
 //
 //
-
+//************************************************************************************************************************************
 
     // above mehtods are not  working  it took me 6 hours to solve this problem
 
@@ -204,13 +204,13 @@ public static HttpResponse<String> postWithJsonAndImage(String url, String json,
     String boundaryPrefix = "--" + boundary;
     String contentType = "multipart/form-data; boundary=" + boundary;
 
-    // Prepare JSON part
+    // preparing json part
     String jsonPart = boundaryPrefix + "\r\n" +
             "Content-Disposition: form-data; name=\"itemsDto\"\r\n" +
             "Content-Type: application/json\r\n\r\n" +
             json + "\r\n";
 
-    // Prepare Image part
+    // preparing image part
     String imagePartHeader = boundaryPrefix + "\r\n" +
             "Content-Disposition: form-data; name=\"file\"; filename=\"" + image.getName() + "\"\r\n" +
             "Content-Type: " + Files.probeContentType(image.toPath()) + "\r\n\r\n";
@@ -218,7 +218,7 @@ public static HttpResponse<String> postWithJsonAndImage(String url, String json,
     byte[] imageBytes = Files.readAllBytes(image.toPath());
     byte[] closingBoundary = ("\r\n" + boundaryPrefix + "--\r\n").getBytes();
 
-    // Combine all parts into the request body
+    // combine all parts of the body
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     outputStream.write(jsonPart.getBytes());
     outputStream.write(imagePartHeader.getBytes());
@@ -227,7 +227,7 @@ public static HttpResponse<String> postWithJsonAndImage(String url, String json,
 
     byte[] body = outputStream.toByteArray();
 
-    // Create HTTP request
+    // creating http request
     HttpRequest request = HttpRequest.newBuilder()
             .header("Authorization", authHeader)
             .header("Content-Type", contentType)

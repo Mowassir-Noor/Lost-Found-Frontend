@@ -164,6 +164,7 @@ public class AdminController {
             JSONObject item = new JSONObject(response.body());
 
             String itemName = item.getString("itemName");
+            System.out.println(itemName);
             String itemCategory = item.getString("itemCategory");
             String itemDescription = item.getString("itemDescription");
             String itemDate = item.getString("itemDate");

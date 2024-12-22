@@ -89,9 +89,9 @@ public class ItemPreviewController {
 
     public void setItemDetail(String title, String category, String description, String date, byte[] image) {
         itemTitle.setText(title);
-        itemCategory.setText(category);
-        itemDescription.setText(description);
-        itemDate.setText(date);
+        itemCategory.setText("Category:   "+category);
+        itemDescription.setText("Description:   "+description);
+        itemDate.setText("Date:   "+date);
         if (image != null && image.length > 0) {
             Image itemImage = new Image(new ByteArrayInputStream(image));
             itemImageView.setImage(itemImage);

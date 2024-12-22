@@ -18,6 +18,9 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 
 public class AddItemController {
     @FXML
@@ -37,6 +40,17 @@ public class AddItemController {
 
     private String itemImagePath;
 
+    public static boolean isValidDate(String date) {
+        String format = "yyyy-MM-dd";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(format);
+        try {
+            LocalDate.parse(date, formatter); // Try parsing the date
+            return true;
+        } catch (DateTimeParseException e) {
+            return false;
+        }
+    }
+
     @FXML
     private void handleSaveItem() throws Exception {
         String itemName = itemNameField.getText();
@@ -53,24 +67,34 @@ public class AddItemController {
 
 
 
-       String url="http://localhost:8080/admin/items";
+//       String url="http://localhost:8080/admin/items";
+
 
         if (!itemName.isEmpty() && !itemCategory.isEmpty() && !itemDate.isEmpty()) {
 
+         if(isValidDate(itemDate)) {
+             Item newItem = new Item(itemName, itemCategory, itemDescription, itemDate, itemImagePath);
 
-            Item newItem = new Item(itemName, itemCategory,itemDescription,itemDate, itemImagePath);
+             AdminController.addItem(newItem);
 
-            AdminController.addItem(newItem);
+             Alert alert = new Alert(Alert.AlertType.INFORMATION);
+             alert.setTitle("Ekleme Başarılı");
+             alert.setHeaderText(null);
+             alert.setContentText("Yeni eşya başarıyla eklendi.");
+             alert.showAndWait();
 
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Ekleme Başarılı");
-            alert.setHeaderText(null);
-            alert.setContentText("Yeni eşya başarıyla eklendi.");
-            alert.showAndWait();
+             // Ekleme işlemi sonrası AddItem penceresini kapat
+             Stage stage = (Stage) itemNameField.getScene().getWindow();
+             stage.close();
+         }
+         else {
+             Alert alert = new Alert(Alert.AlertType.ERROR);
+             alert.setTitle("Ekleme Başarısız");
+             alert.setHeaderText(null);
+             alert.setContentText("Tarih doğru formatta giriniz");
+             alert.showAndWait();
 
-            // Ekleme işlemi sonrası AddItem penceresini kapat
-            Stage stage = (Stage) itemNameField.getScene().getWindow();
-            stage.close();
+         }
         } else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Ekleme Başarısız");

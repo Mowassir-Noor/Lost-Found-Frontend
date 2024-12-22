@@ -1,30 +1,30 @@
-/* user_view.css */
+/*!* user_view.css *!*/
 
-.welcome-text {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-fill: #333333;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);
-}
+/*.welcome-text {*/
+/*    -fx-font-size: 24px;*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-fill: #333333;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);*/
+/*}*/
 
-.back-button {
-    -fx-background-color: #4CAF50;
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-padding: 10 20;
-    -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);
-}
+/*.back-button {*/
+/*    -fx-background-color: #4CAF50;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-font-size: 14px;*/
+/*    -fx-padding: 10 20;*/
+/*    -fx-background-radius: 5;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);*/
+/*}*/
 
-.back-button:hover {
-    -fx-background-color: #45a049;
-}
+/*.back-button:hover {*/
+/*    -fx-background-color: #45a049;*/
+/*}*/
 
-.scroll-pane {
-    -fx-background: white;
-    -fx-border-color: #cccccc;
-    -fx-padding: 10;
-}
+/*.scroll-pane {*/
+/*    -fx-background: white;*/
+/*    -fx-border-color: #cccccc;*/
+/*    -fx-padding: 10;*/
+/*}*/
 
 .item-container {
     -fx-padding: 15;
@@ -35,48 +35,120 @@
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);
 }
 
-.user-item-card {
-    -fx-background-color: white;
-    -fx-border-color: #cccccc;
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
-    -fx-transition: all 0.3s ease-in-out;
-    -fx-padding: 15 15 25 15; /* Add padding to the bottom */
-    -fx-pref-width: 200px; /* Set fixed width */
-    -fx-pref-height: 300px; /* Set fixed height */
+/*.user-item-card {*/
+/*    -fx-background-color: white;*/
+/*    -fx-border-color: #cccccc;*/
+/*    -fx-border-radius: 10;*/
+/*    -fx-background-radius: 10;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);*/
+/*    -fx-transition: all 0.3s ease-in-out;*/
+/*    -fx-padding: 15 15 25 15; !* Add padding to the bottom *!*/
+/*    -fx-pref-width: 200px; !* Set fixed width *!*/
+/*    -fx-pref-height: 300px; !* Set fixed height *!*/
+/*}*/
+
+/*.user-item-card:hover {*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.6), 20, 0, 0, 0); !* Green glow *!*/
+/*}*/
+
+/*.item-name {*/
+/*    -fx-font-size: 18px;*/
+/*    -fx-font-weight: bold;*/
+/*    -fx-fill: black;*/
+/*    -fx-text-alignment: center;*/
+/*}*/
+
+/*.item-category {*/
+/*    -fx-font-size: 14px;*/
+/*    -fx-fill: darkblue;*/
+/*    -fx-text-alignment: center;*/
+/*}*/
+
+/*.item-date {*/
+/*    -fx-font-size: 14px;*/
+/*    -fx-fill: darkgray;*/
+/*}*/
+
+/*.details-button {*/
+/*    -fx-background-color: #4CAF50;*/
+/*    -fx-text-fill: white;*/
+/*    -fx-background-radius: 5;*/
+/*    -fx-padding: 10 20;*/
+/*    -fx-cursor: hand;*/
+/*}*/
+
+/*.details-button:hover {*/
+/*    -fx-background-color: #45a049;*/
+/*}*/
+
+/* styles.css */
+.root {
+    -fx-font-family: 'Arial';
+    -fx-padding: 20;
+    -fx-background-color: #f0f0f0;
 }
 
-.user-item-card:hover {
-    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.6), 20, 0, 0, 0); /* Green glow */
-}
-
-.item-name {
-    -fx-font-size: 18px;
+.text-title {
+    -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-fill: black;
-    -fx-text-alignment: center;
+    -fx-fill: #333333;
 }
 
-.item-category {
-    -fx-font-size: 14px;
-    -fx-fill: darkblue;
-    -fx-text-alignment: center;
-}
-
-.item-date {
-    -fx-font-size: 14px;
-    -fx-fill: darkgray;
-}
-
-.details-button {
+.button {
     -fx-background-color: #4CAF50;
     -fx-text-fill: white;
-    -fx-background-radius: 5;
     -fx-padding: 10 20;
+    -fx-font-size: 14px;
     -fx-cursor: hand;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
 }
 
-.details-button:hover {
+.button:hover {
     -fx-background-color: #45a049;
 }
+
+.button:pressed {
+    -fx-background-color: #3e8e41;
+}
+
+.hbox-buttons {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+/*.flowpane-container {*/
+/*    -fx-hgap: 20;*/
+/*    -fx-vgap: 20;*/
+/*    -fx-padding: 20;*/
+/*}*/
+
+.item-card {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 15;
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+    -fx-pref-width: 275px;
+    -fx-pref-height: 400px;
+}
+
+.item-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.6), 20, 0, 0, 0);
+    /*-fx-background-color: #f9f9f9;*/
+    /*-fx-border-color:#4CAF50 ;*/
+}
+
+.anchor-pane {
+    -fx-background-color: #ffffff;
+    /*-fx-border-color: #cccccc;*/
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+
