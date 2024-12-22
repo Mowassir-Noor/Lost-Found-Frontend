@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vx.esyakayipsistemi.Controller.IndexController" stylesheets="@index.css">
+    <children>
+        <VBox alignment="CENTER" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" styleClass="vbox-container">
+            <children>
+                <!-- Add ImageView for the logo -->
+                <ImageView fx:id="logoImageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-title" text="HOŞ GELDİNİZ" wrappingWidth="300.0">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-subtitle" text="Gazi Üniversitesi Kayıp Eşya Sistemi" wrappingWidth="300.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Text>
+                <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Kayıt Ol" styleClass="button" onAction="#handleRegisterButtonAction" />
+                <Button fx:id="loginButton" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Giriş Yap" styleClass="button" onAction="#handleLoginButtonAction" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

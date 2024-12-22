@@ -1,0 +1,82 @@
+/* user_view.css */
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);
+}
+
+.back-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);
+}
+
+.back-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.scroll-pane {
+    -fx-background: white;
+    -fx-border-color: #cccccc;
+    -fx-padding: 10;
+}
+
+.item-container {
+    -fx-padding: 15;
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 2, 0, 2, 2);
+}
+
+.user-item-card {
+    -fx-background-color: white;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+    -fx-transition: all 0.3s ease-in-out;
+    -fx-padding: 15 15 25 15; /* Add padding to the bottom */
+    -fx-pref-width: 200px; /* Set fixed width */
+    -fx-pref-height: 300px; /* Set fixed height */
+}
+
+.user-item-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.6), 20, 0, 0, 0); /* Green glow */
+}
+
+.item-name {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-fill: black;
+    -fx-text-alignment: center;
+}
+
+.item-category {
+    -fx-font-size: 14px;
+    -fx-fill: darkblue;
+    -fx-text-alignment: center;
+}
+
+.item-date {
+    -fx-font-size: 14px;
+    -fx-fill: darkgray;
+}
+
+.details-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.details-button:hover {
+    -fx-background-color: #45a049;
+}
