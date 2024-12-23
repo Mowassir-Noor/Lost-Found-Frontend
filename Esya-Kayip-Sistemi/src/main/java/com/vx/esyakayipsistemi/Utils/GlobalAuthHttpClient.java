@@ -203,13 +203,11 @@ public static HttpResponse<String> postWithJsonAndImage(String url, String json,
     String boundary = UUID.randomUUID().toString();
     String boundaryPrefix = "--" + boundary;
     String contentType = "multipart/form-data; boundary=" + boundary;
-
     // preparing json part
     String jsonPart = boundaryPrefix + "\r\n" +
             "Content-Disposition: form-data; name=\"itemsDto\"\r\n" +
             "Content-Type: application/json\r\n\r\n" +
             json + "\r\n";
-
     // preparing image part
     String imagePartHeader = boundaryPrefix + "\r\n" +
             "Content-Disposition: form-data; name=\"file\"; filename=\"" + image.getName() + "\"\r\n" +
@@ -217,7 +215,6 @@ public static HttpResponse<String> postWithJsonAndImage(String url, String json,
 
     byte[] imageBytes = Files.readAllBytes(image.toPath());
     byte[] closingBoundary = ("\r\n" + boundaryPrefix + "--\r\n").getBytes();
-
     // combine all parts of the body
     ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     outputStream.write(jsonPart.getBytes());

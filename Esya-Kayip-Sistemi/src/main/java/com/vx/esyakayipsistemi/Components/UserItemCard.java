@@ -93,7 +93,7 @@ public class  UserItemCard extends BorderPane {
         itemName.setWrappingWidth(200);
 
         // Item Category
-        Text itemCategory = new Text("Category: " + category);
+        Text itemCategory = new Text("Kategory: " + category);
         itemCategory.setFont(Font.font("Arial", 14));
         itemCategory.setFill(Color.DARKBLUE);
         itemCategory.setTextAlignment(TextAlignment.CENTER);
@@ -101,7 +101,7 @@ public class  UserItemCard extends BorderPane {
 
 
         // Item Date
-        Text itemDate = new Text("Date: " + date);
+        Text itemDate = new Text("Tarih: " + date);
         itemDate.setFont(Font.font("Arial", 14));
         itemDate.setFill(Color.DARKGRAY);
         itemDate.setWrappingWidth(200);
@@ -112,7 +112,7 @@ public class  UserItemCard extends BorderPane {
         this.setCenter(detailsBox);
 
         // Action Buttons
-        Button detailsButton = new Button("View Details");
+        Button detailsButton = new Button("Detay");
         detailsButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white;");
         detailsButton.setOnMouseEntered(e -> detailsButton.setStyle("-fx-background-color: #45a049; -fx-text-fill: white;"));
         detailsButton.setOnMouseExited(e -> detailsButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white;"));

@@ -45,7 +45,7 @@ public class ItemCard extends BorderPane {
         itemName.setWrappingWidth(200);
 
         // Item Category
-        Text itemCategory = new Text("Category: " + category);
+        Text itemCategory = new Text("Kategory: " + category);
         itemCategory.setFont(Font.font("Arial", 14));
         itemCategory.setFill(Color.DARKBLUE);
         itemCategory.setTextAlignment(TextAlignment.CENTER);
@@ -53,7 +53,7 @@ public class ItemCard extends BorderPane {
 
 
         // Item Date
-        Text itemDate = new Text("Date: " + date);
+        Text itemDate = new Text("Tarih: " + date);
         itemDate.setFont(Font.font("Arial", 14));
         itemDate.setFill(Color.DARKGRAY);
         itemDate.setWrappingWidth(200);
@@ -64,13 +64,13 @@ public class ItemCard extends BorderPane {
         this.setCenter(detailsBox);
 
         // Action Buttons
-        Button detailsButton = new Button("View Details");
+        Button detailsButton = new Button("Detayı");
         detailsButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white;");
         detailsButton.setOnMouseEntered(e -> detailsButton.setStyle("-fx-background-color: #45a049; -fx-text-fill: white;"));
         detailsButton.setOnMouseExited(e -> detailsButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white;"));
         detailsButton.setOnAction(e -> adminController.handleDetailsButtonAction(new ActionEvent(detailsButton, null), itemId));
 
-        Button deleteButton = new Button("Delete");
+        Button deleteButton = new Button("Sil");
         deleteButton.setStyle("-fx-background-color: #f44336; -fx-text-fill: white;");
         deleteButton.setOnMouseEntered(e -> deleteButton.setStyle("-fx-background-color: #d32f2f; -fx-text-fill: white;"));
         deleteButton.setOnMouseExited(e -> deleteButton.setStyle("-fx-background-color: #f44336; -fx-text-fill: white;"));

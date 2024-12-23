@@ -136,7 +136,17 @@ public class AdminController {
 
             ItemCard itemCard = new ItemCard(url, image, name, category, description, date,
                     card -> {
+                String delBaseUrl=ConfigUtils.getProperty("app.adminUrl");
+
+                String delUrl=delBaseUrl+"/items";
+                        System.out.println(delUrl);
                         // Delete handler implementation
+                        try {
+                            HttpResponse<String> delResponse =GlobalAuthHttpClient.delete(delUrl,item.optLong("itemId") );
+                            System.out.println(delResponse);
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                         itemContainer.getChildren().remove(card);
                     },
                     card -> {

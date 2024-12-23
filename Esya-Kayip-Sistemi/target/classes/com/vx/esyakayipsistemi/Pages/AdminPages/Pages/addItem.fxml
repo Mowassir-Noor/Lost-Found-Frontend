@@ -19,7 +19,7 @@
             </padding>
 
             <!-- Title -->
-            <Text text="Add New Item" style="-fx-fill: #4CAF50;" strokeWidth="0.0" textAlignment="CENTER">
+            <Text text="Yeni Eşya Ekle" style="-fx-fill: #4CAF50;" strokeWidth="0.0" textAlignment="CENTER">
                 <font>
                     <Font size="28.0" />
                 </font>
@@ -35,24 +35,24 @@
                           style="-fx-font-size: 14px; -fx-border-color: #CCCCCC; -fx-border-radius: 5; -fx-background-radius: 5;" />
 
                 <!-- Category Field -->
-                <TextField fx:id="itemCategoryField" promptText="Category" style="-fx-font-size: 14px; -fx-border-color: #CCCCCC; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                <TextField fx:id="itemCategoryField" promptText="Kategory" style="-fx-font-size: 14px; -fx-border-color: #CCCCCC; -fx-border-radius: 5; -fx-background-radius: 5;" />
 
                 <!-- Date Field -->
-                <TextField fx:id="itemDateField" promptText="Date (YYYY-MM-DD)" style="-fx-font-size: 14px; -fx-border-color: #CCCCCC; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                <TextField fx:id="itemDateField" promptText="Tarih (YYYY-MM-DD)" style="-fx-font-size: 14px; -fx-border-color: #CCCCCC; -fx-border-radius: 5; -fx-background-radius: 5;" />
             </VBox>
 
             <!-- Image Upload -->
             <VBox spacing="10.0" alignment="CENTER">
                 <ImageView fx:id="itemImageView" fitWidth="150.0" fitHeight="150.0" preserveRatio="true"
                            style="-fx-border-color: #CCCCCC; -fx-border-radius: 5;" />
-                <Button text="Upload Image" onAction="#handleImageUpload" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" />
+                <Button text="Fotoğraf Yükle" onAction="#handleImageUpload" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" />
             </VBox>
 
             <!-- Buttons -->
             <HBox spacing="15.0" alignment="CENTER">
-                <Button text="Save Item" onAction="#handleSaveItem" prefWidth="120.0"
+                <Button text="Kaydet" onAction="#handleSaveItem" prefWidth="120.0"
                         style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" />
-                <Button text="Cancel" onAction="#handleCancel" prefWidth="120.0"
+                <Button text="İptal" onAction="#handleCancel" prefWidth="120.0"
                         style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-border-radius: 5; -fx-background-radius: 5;" />
             </HBox>
         </VBox>
